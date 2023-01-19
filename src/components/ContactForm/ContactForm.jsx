@@ -5,10 +5,6 @@ import css from './ContactForm.module.css';
 export const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // state = {
-  //   name: '',
-  //   number: '',
-  // };
 
   const nameInputId = nanoid();
   const numberInputId = nanoid();
@@ -20,18 +16,6 @@ export const ContactForm = ({ onSubmit }) => {
     setName('');
     setNumber('');
   };
-
-  // handleSubmit = e => {
-  //   e.preventDefault();
-
-  //   this.props.onSubmit({ name: this.state.name, number: this.state.number });
-
-  //   this.reset();
-  // };
-
-  // reset = () => {
-  //   this.setState({ number: '', name: '' });
-  // };
 
   // Отвечает за обновление состояния
 
@@ -48,12 +32,7 @@ export const ContactForm = ({ onSubmit }) => {
         return;
     }
   };
-  // handleChange = e => {
-  //   const { name, value } = e.target;
-  //   this.setState({ [name]: value });
-  // };
 
-  // const { name } = this.state;
   return (
     <form onSubmit={handleSubmit} className={css.ContactForm}>
       <label htmlFor={nameInputId} className={css.ContactForm__label}>
